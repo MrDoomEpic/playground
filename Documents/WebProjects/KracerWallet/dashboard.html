@@ -35,11 +35,34 @@
             </ul>
         </nav>
     </header>
+    <div id="root" class="root">
+        <div id="balance-container" class="balance-container">
+            
+        </div>
+    </div>
 </body>
 <script type="text/javascript" src="js/main.js"></script>
 <style>
     body {
         margin: 0;
+    }
+
+    .root {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    .balance-container {
+        width: 100%; 
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        border: 1.5px solid rgb(230, 229, 229);
+        border-radius: 12px;
     }
 
     .information-1 {
