@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Kracer Personal Wallet</title>
+</head>
+<body>
+    <div id="information-1" class="information-1">
+        <p style="margin: 0; color: white; font-family: Guton-Regular">You're on official testing grounds of Kracer Web Development. <a href="https://kracer.dev/testing" style="color:rgb(107, 107, 243)">Learn more</a></p>
+    </div>
+    <header>
+        <div id="header" class="header">
+            <a href="index.html">
+                <img src="Images/kracerlogoremadetransparent1.png">
+                | Wallet
+            </a>
+            <nav style="height: 100%;">
+                <ul style="list-style-type:none; list-style:none; margin: 0; height: 100%;">
+                    <li style="display:inline-block; height: 100%; padding-left:5px; padding-right:6.5px; border-right: 1.5px solid rgb(230, 229, 229);"><a style="font-family: Guton-Regular; text-decoration: none;">Solutions</a></li>
+                    <li style="display:inline-block; height: 100%; padding-left:5px; padding-right:6.5px; border-right: 1.5px solid rgb(230, 229, 229);"><a style="font-family: Guton-Regular; text-decoration: none;">Deposits & Savings</a></li>
+                    <li style="display:inline-block; height: 100%; padding-left:5px; padding-right:6.5px;"><a style="font-family: Guton-Regular; text-decoration: none;">Corporate Wallets</a></li>
+                </ul>
+            </nav>
+            <button onclick="redirectToLogin()" id="login-btn" class="login-btn">
+                <img src="Images/people-image.webp">
+                Customer Area
+            </button>
+        </div>
+        <nav class="second-nav">
+            <ul style="list-style-type:none; list-style:none; margin: 0; height: 100%;">
+                <li style="display:inline-block; height: 100%; padding-left:5px; padding-right:6.5px; border-right: 1.5px solid rgb(230, 229, 229);"><a style="font-family: Guton-Regular; text-decoration: none;">Solutions</a></li>
+                <li style="display:inline-block; height: 100%; padding-left:5px; padding-right:6.5px; border-right: 1.5px solid rgb(230, 229, 229);"><a style="font-family: Guton-Regular; text-decoration: none;">Deposits & Savings</a></li>
+                <li style="display:inline-block; height: 100%; padding-left:5px; padding-right:6.5px;"><a style="font-family: Guton-Regular; text-decoration: none;">Corporate Wallets</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+<style>
+    body {
+        margin: 0;
+    }
+
+    .information-1 {
+        background-color: rgb(31, 31, 31);
+        text-align: center;
+    }
+
+    @media screen and (min-width: 960px) {
+        .second-nav {
+            display: none;
+        }
+
+        .header img {
+            max-width: clamp(50px, 6vw, 104px);
+        }
+        .header a {
+            font-size: clamp(8px, 1.5vw, 24px);
+        }
+
+        .header button {
+            margin-left: auto;
+        }
+    }
+
+    @media screen and (min-width: 700px) and (max-width: 959px) {
+        .second-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: clamp(8px, 4vw, 24px);
+            ul {
+                padding: 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: 960px) {
+
+        .header {
+            justify-content: center;
+        }
+
+        .header nav {
+            display: none;
+        }
+        .header button {
+            display: none;
+        }
+
+
+        .header img {
+            max-width: clamp(90px, 15vw, 104px);
+        }
+        .header a {
+            font-size: clamp(8px, 4vw, 24px);
+        }
+    }
+
+    .header button {
+        background-color: white;
+        border-radius: 8px;
+        border-color: black;
+        size: clamp(8px, 2vw, 24px);
+        font-size: clamp(8px, 2vw, 24px);
+        font-family: Guton-Regular;
+        outline: none;
+        transition: 0.5s;
+        img {
+            max-width: clamp(8px, 2vw, 32px);
+            
+        }
+    }
+
+    .header button:hover {
+        color: white;
+        background-color: black;
+        border-color: white;
+        img {
+            -webkit-filter: invert(1);
+            filter: invert(1);
+        }
+    }
+
+    nav ul li {
+        background-color: white;
+        transition: 0.5s;
+        a {
+            color: black;
+        }
+    }
+
+    nav ul li:hover {
+        background-color: rgb(22, 22, 255);
+        a {
+            color: white;
+        }
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        border-bottom: 1.5px solid rgb(230, 229, 229);
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    .header img {
+        transform: translateY(25%); 
+    }
+    .header a {
+        text-decoration: none;
+        font-family: LibreBaskerville-Bold;
+        color: black;
+        transform: translateY(-12.5%);
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+    }
+
+    @font-face {
+        font-family: LibreBaskerville-Bold;
+        src: url(Fonts/LibreBaskerville-Bold.ttf);
+    }
+
+    @font-face {
+        font-family: Guton-Regular;
+        src: url(Fonts/Guton-Regular.otf);
+    }
+</style>
+
+</html>
