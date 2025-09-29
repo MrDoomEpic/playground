@@ -38,8 +38,8 @@
     <div id="root" class="root">
         <div id="balance-container" class="balance-container">
             <div id="balance-container-1" class="balance-container-1">
-                <p style="margin: 0; font-size: clamp(8px, 1.5vw, 24px);">Balance</p>
-                <a id="balance" class="balance">27,45 $</a>
+                <p class="balance-text" style="margin: 0;">Available Balance</p>
+                <a id="balance" class="balance">27,45 USD</a>
             </div>
             <div id="balance-container2" class="balance-container-2">
                 a
@@ -65,7 +65,6 @@
 
     .balance {
         font-weight: bold;
-        font-size: clamp(8px, 3vw, 48px);
     }
 
     .balance-container {
@@ -77,19 +76,6 @@
         border: 1.5px solid rgb(230, 229, 229);
         border-radius: 12px;
         display: grid;
-        grid-template-columns: 1.5fr 0.5fr;
-    }
-
-    .balance-container-1 {
-        grid-column: 1 / 1;
-        grid-row: 1 / 1;
-        border-right: 1.5px solid rgb(230, 229, 229);
-        margin-right: 1vw;
-    }
-
-    .balance-container-2 {
-        grid-column: 2 / 2;
-        grid-row: 1 / 1;
     }
 
     .information-1 {
@@ -98,6 +84,30 @@
     }
 
     @media screen and (min-width: 960px) {
+        .balance-text {
+            font-size: clamp(8px, 3vw, 24px);
+        }
+
+        .balance {
+            font-size: clamp(8px, 3vw, 48px);
+        }
+
+        .balance-container {
+            grid-template-columns: 1.5fr 0.5fr;
+        }
+
+        .balance-container-1 {
+            grid-column: 1 / 1;
+            grid-row: 1 / 1;
+            border-right: 1.5px solid rgb(230, 229, 229);
+            margin-right: 1vw;
+        }
+
+        .balance-container-2 {
+            grid-column: 2 / 2;
+            grid-row: 1 / 1;
+        }
+
         .second-nav {
             display: none;
         }
@@ -127,6 +137,29 @@
     }
 
     @media screen and (max-width: 959px) {
+        .balance {
+            font-size: clamp(16px, 6vw, 96px);
+        }
+
+        .balance-text {
+            font-size: clamp(8px, 3vw, 48px);
+        }
+
+        .balance-container {
+            grid-template-rows: 1.5fr 0.5fr;
+            text-align: center;
+        }
+
+        .balance-container-1 {
+            grid-row: 1 / 1;
+            border-bottom: 1.5px solid rgb(230, 229, 229);
+            padding-bottom: 3vw;
+        }
+
+        .balance-container-2 {
+            margin-top: 1vw;
+            grid-row: 2 / 2;
+        }
 
         .header {
             justify-content: center;
